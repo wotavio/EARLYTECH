@@ -1,10 +1,13 @@
-import {} from "./styled";
+import { Title } from "./styled";
 function Login() {
   return <>
   <containerLogin>
         <div class="content first-content">
             <div class="first-column">
-                <h2 class="title title-primary">Bem vindo!</h2>
+                <Title>
+                    <TitlePrimary>Bem vindo!</TitlePrimary>
+                </Title>
+                
                 <p class="description description-primary">Para continuar conectado</p>
                 <p class="description description-primary">Por favor insira suas informações</p>
                 <button id="signin" class="btn btn-primary">Sign Up</button>

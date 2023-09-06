@@ -45,23 +45,23 @@ export const Title = styled.h1`
     text-transform: capitalize;
 
 `
-.title-primary {
+export const TitlePrimary = styled.h1`
     color: #fff;
-}
-.title-second {
-    color: #454ef3;
-}
+`
+export const titleSecond = styled.h1`
+     color: #454ef3;
+`
 export const description = styled.p`
     font-size: 14px;
     font-weight: 300;
     line-height: 30px;
 `
-.description-primary {
+export const descriptionPrimary = styled.p`
     color: #fff;
-}
-.description-second {
+`
+export const descriptionSecond = styled.p`
     color: #262727;
-}
+`
 export const btn = styled.button`
     border-radius: 15px;
     text-transform: uppercase;
@@ -75,42 +75,45 @@ export const btn = styled.button`
     border: none;
     margin-top: 1rem;
 `
-.btn-primary {
+export const btnPrimary = styled.button`
     background-color: transparent;
     border: 1px solid #fff;
     transition: background-color .5s;
-}
-.btn-primary:hover {
+        
+    &:hover {
     background-color: #fff;
     color: #454ef3;
-}
-.btn-second {
+    }
+`
+export const btnSecond = styled.button`
     background-color: #454ef3;
     border: 1px solid #454ef3;
     transition: background-color .5s;
-}
-.btn-second:hover {
+
+    &:hover {
     background-color: #fff;
     border: 1px solid #454ef3;
     color: #454ef3;
 }
-.first-content {
+`
+
+export const firstContent = styled.div`
     display: flex;
-}
-.first-content .second-column {
     z-index: 11;
-}
-export const first-column = styled.div`
+`
+
+export const firstColumn = styled.div`
     text-align: center;
     width: 40%;
     z-index: 10;
 `
-.second-column {
+export const secondColumn = styled.div`
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    z-index: 11;
+`
 export const social-media = styled.div`
     margin: 1rem 0;
 `
