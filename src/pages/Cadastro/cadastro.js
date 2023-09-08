@@ -17,20 +17,33 @@ function Login() {
                                 <StyleForm >
                                     <InputBoxContainer>
                                         <InputBox>
+                                            <Label for="firstname">Primeiro Nome</Label>
+                                            <Input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required></Input>
+                                        </InputBox>
+                                        <InputBox>
+                                            <Label for="firstname">Sobrenome</Label>
+                                            <Input id="firstname" type="text" name="firstname" placeholder="Digite seu sobrenome" required></Input>
+                                        </InputBox>
+                                        <InputBox>
                                             <Label for="firstname">Email</Label>
                                             <Input id="firstname" type="text" name="firstname" placeholder="Digite seu email" required></Input>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <InputBoxContainer>
-                                    <InputBox>
+                                        <InputBox>
+                                            <Label for="firstname">Telefone</Label>
+                                            <Input id="firstname" type="tel" name="firstname" placeholder="Digite seu telefone" required></Input>
+                                        </InputBox><InputBox>
                                             <Label for="firstname">Senha</Label>
                                             <Input id="firstname" type="text" name="firstname" placeholder="Digite sua senha" required></Input>
                                         </InputBox>
                                         <InputBox>
-                                        <Botao>Continuar</Botao>
+                                            <Label for="firstname">Confirme sua senha</Label>
+                                            <Input id="firstname" type="text" name="firstname" placeholder="Confirme sua senha" required></Input>
                                         </InputBox>
                                     </InputBoxContainer>
                                 </StyleForm>
+                                <Botao>Continuar</Botao>
                             </ContainerFormulario>
                         </Divi>
                     </Form>

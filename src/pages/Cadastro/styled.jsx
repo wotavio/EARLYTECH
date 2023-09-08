@@ -1,3 +1,4 @@
+
 import { styled } from "styled-components";
 
 export const CaixaDeTexto = styled.div`
@@ -73,8 +74,8 @@ export const Titulo = styled.h1`
     color:#0c0ce9c7;
     text-align: center;
     justify-content: center;
-    padding: 0vh;
-    margin-top: 5vh;
+    padding: 4vh;
+    margin-bottom: -6vh
 `
 export const InputBox = styled.div`
     display: flex;
@@ -115,10 +116,8 @@ export const ContainerFormulario = styled.div`
 
 export const StyleForm = styled.div`
     display: flex;
-    gap: vw;
+    gap: 2vw;
     border-radius: 20px;
-    flex-direction: column;
-    align-items: center;
 `
 
 export const Botao = styled.button`

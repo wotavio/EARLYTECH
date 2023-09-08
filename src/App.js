@@ -1,16 +1,28 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import CardPesquisa from "./cards/CardPesquisa/CardPesquisa";
-import CardMateriais from "./cards/CardMateriais/CardMateriais";
+import Cadastro from "./pages/Cadastro/cadastro";
+import {ChakraProvider, extendTheme} from "@chakra-ui/react"
+import Login from "./pages/Login/Login";
 
+function App(){
+  const styles = {
+    global: () => ({
+      body: {
+        fontFamily: 'Arial Black',
+        margin: 0,
+        padding: 0,
+        background: 'var(--base-light-gray, #F6F8FD)',
+      }})}
 
-export default function App() {
+  const theme = extendTheme({styles})
+
   return (
     <>
-      <Header />
-      <CardPesquisa />
-      <CardMateriais />
-      <Footer/>
+    <ChakraProvider theme={theme}>
+      {/* <Cadastro/> */}
+      <Login/>
+      {/* <Home/> */}
+    </ChakraProvider>
     </>
   );
 }
+
+export default App
