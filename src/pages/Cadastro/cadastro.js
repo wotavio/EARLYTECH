@@ -26,7 +26,7 @@ function Login() {
                                         </InputBox>
                                         <InputBox>
                                             <Label for="firstname">Email</Label>
-                                            <Input id="firstname" type="text" name="firstname" placeholder="Digite seu email" required></Input>
+                                            <Input id="firstname" type="email" name="firstname" placeholder="Digite seu email" required></Input>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <InputBoxContainer>
@@ -39,7 +39,7 @@ function Login() {
                                         </InputBox>
                                         <InputBox>
                                             <Label for="firstname">Confirme sua senha</Label>
-                                            <Input id="firstname" type="text" name="firstname" placeholder="Confirme sua senha" required></Input>
+                                            <Input id="firstname" type="password" name="firstname" placeholder="Confirme sua senha" required></Input>
                                         </InputBox>
                                     </InputBoxContainer>
                                 </StyleForm>

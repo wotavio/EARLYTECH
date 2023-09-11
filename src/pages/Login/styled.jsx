@@ -7,7 +7,7 @@ export const CaixaDeTexto = styled.div`
 `
 
 export const Container = styled.div`
-    width: 80%;
+    width: 90%;
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -24,10 +24,12 @@ export const Container = styled.div`
 
 export const ContainerForm = styled.div`
 width: 70%;
-display: flex;
+display: absolute;
 align-self: center;
-height: 90vh;
+height: 100%;
 justify-content: center;
+flex-direction: row;
+margin-top: 10%;
 `
 
 export const Body = styled.div`
@@ -74,11 +76,12 @@ export const Titulo = styled.h1`
     text-align: center;
     justify-content: center;
     padding: 0vh;
-    margin-top: 5vh;
+    margin-top: 10vh;
 `
 export const InputBox = styled.div`
     display: flex;
     flex-direction: column;
+    margin-left: 2vw;
 `
 export const Input = styled.input`
     width: 80%;
@@ -115,7 +118,6 @@ export const ContainerFormulario = styled.div`
 
 export const StyleForm = styled.div`
     display: flex;
-    gap: vw;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
@@ -138,5 +140,4 @@ export const Botao = styled.button`
 export const InputBoxContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap:0vh;
 `

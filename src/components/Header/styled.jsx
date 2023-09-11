@@ -1,5 +1,20 @@
 import { styled } from "styled-components";
 
+export const InputBox = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+export const Input = styled.input`
+    width: 80%;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000064;
+    font-size: 0.8rem;
+    `
+
+
 export const Fundo = styled.div`
   width: 98vw;
   height: 10vh;
@@ -17,7 +32,7 @@ export const FirstContainer = styled.div`
 `;
 
 export const SecondContainer = styled.div`
-  width: 71vw;
+  width: 70vw;
   height: 10vh;
   align-items: center;
   display: flex;
@@ -26,8 +41,8 @@ export const SecondContainer = styled.div`
 `;
 
 export const ImgContainer = styled.img`
-  width: 10vw;
-  height: 20vh;
+  width: 17vw;
+  height: 13vh;
   padding-left: 10vw;
 `;
 
@@ -59,4 +74,5 @@ export const Topicos = styled.button`
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+  margin-right: 3vw;
 `;

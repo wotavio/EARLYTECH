@@ -1,6 +1,6 @@
 
   import LogoImg from "../../assets/Early.png";
-import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos } from "./styled";
+import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos, InputBox, Input } from "./styled";
   
   function Header() {
     return (
@@ -13,7 +13,9 @@ import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos }
             <Topicos>HOME</Topicos>
             <Topicos>MATERIAIS</Topicos>
             <Topicos>SUPORTE</Topicos>
-            <Topicos>Q</Topicos>
+            <InputBox>
+             <Input id="firstname" type="text" name="firstname" placeholder="🔍  Pesquisar..." required></Input>
+            </InputBox>
             <Perfil>Perfil</Perfil>
           </SecondContainer>
         </Fundo>

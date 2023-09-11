@@ -1,17 +1,17 @@
 import LogoImg from "../../assets/Early.png";
-import { Creditos, Direita, Esquerda, FooterContainer, Logo, Texto, Texto1, Titulo, Titulo1 } from "./styled";
+import { Creditos, Direita, Esquerda, FooterContainer, Logo, Row, Texto, Texto1, Titulo, Titulo1 } from "./styled";
   
   function Footer() {
     return (
       <>
         <FooterContainer>
           <Esquerda>
-            <Logo src={LogoImg} />
             <Texto>
               Aplicação Web desenvolvida para o Ensino Médio Senac São Leopoldo,
               como produto de conclusão de curso técnico.
-            </Texto>
+              </Texto>
             <Titulo>São Leopoldo, 2023</Titulo>
+            <Logo src={LogoImg} />
           </Esquerda>
           <Direita>
             <Creditos>

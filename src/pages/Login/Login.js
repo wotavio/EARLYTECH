@@ -1,6 +1,5 @@
 import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, LogoImg, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo } from "./styled"
 import ImagemPrincipal from "../../assets/Early.png"
-import Logo from "../../assets/imgLogin.png"
 function Login() {
     return (
         <>
@@ -13,7 +12,6 @@ function Login() {
                             </FormImage>
                             <ContainerFormulario>
                                 <Titulo>INSIRA SUAS INFORMAÇÕES</Titulo>
-                                {/* <LogoImg src={Logo} /> */}
                                 <StyleForm >
                                     <InputBoxContainer>
                                         <InputBox>
