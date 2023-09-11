@@ -37,6 +37,6 @@ export const ImgContainer = styled.img`
   width: 30%;
   height: 50%;
   padding-left: 5vw;
-  margin-right: 5vw;
+  padding-right: 2vw;
   justify-content: center;
 `;

@@ -1,15 +1,31 @@
-import { Container, RowCard, ImgContainer, H1, Input, InputBox, Label, Box } from "./styled";
+import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil } from "./styled";
 import Recomendado from '../../assets/Recomendado.png';
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button
+} from '@chakra-ui/react'
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 function CardRecomendado() {
   return (
     <>
       <Container>
+        <RowBox>
         <H1>RECOMENDADOS</H1>
-        <InputBox>
-         <Label for="filtro">FILTRAR</Label>
-          <Input id="filtro" type="search" name="Filtro" placeholder="Search" required></Input>
-          </InputBox>
+        <Menu>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    FILTRAR
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Artigos</MenuItem>
+    <MenuItem>Videos</MenuItem>
+    <MenuItem>Ferramentas</MenuItem>
+  </MenuList>
+</Menu>
+</RowBox>
         <RowCard>
           <Box>
           <ImgContainer src={Recomendado} />
@@ -38,6 +54,7 @@ function CardRecomendado() {
           <p>Nome do material</p>
           </Box>
         </RowCard>
+        <Perfil>Veja mais</Perfil>
       </Container>
     </>
   );

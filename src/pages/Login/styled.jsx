@@ -70,6 +70,10 @@ export const Header = styled.div`
     justify-content: space-between;
    
 `
+export const Palavra = styled.p`
+    font-size: 12px;
+    color:#0c0ce9c7;
+`
 export const Titulo = styled.h1`
     font-size: 36px;
     color:#0c0ce9c7;
@@ -137,7 +141,7 @@ export const Botao = styled.button`
     color: white;
 `
 
-export const InputBoxContainer = styled.div`
+export const InputBoxContainer = styled.form`
     display: flex;
     flex-direction: column;
 `

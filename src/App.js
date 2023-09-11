@@ -1,7 +1,5 @@
-import Cadastro from "./pages/Cadastro/cadastro";
 import {ChakraProvider, extendTheme} from "@chakra-ui/react"
-import Login from "./pages/Login/Login";
-import Home from "./pages/Home/Home";
+import Rotas from "./Rotas/Rotas";
 
 function App(){
   const styles = {
@@ -18,9 +16,7 @@ function App(){
   return (
     <>
     <ChakraProvider theme={theme}>
-      {/* <Cadastro/> */}
-      <Login/>
-      {/* <Home/> */}
+      <Rotas/>
     </ChakraProvider>
     </>
   );

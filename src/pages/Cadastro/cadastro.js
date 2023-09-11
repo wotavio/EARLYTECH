@@ -1,7 +1,11 @@
-import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, LogoImg, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo } from "./styled"
+import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo } from "./styled"
 import ImagemPrincipal from "../../assets/Early.png"
-import Logo from "../../assets/imgLogin.png"
-function Login() {
+import { useNavigate } from "react-router-dom"
+
+function Cadastro() {
+    const navigate = useNavigate()
+    const goToLogin = () => {
+        navigate('/')}
     return (
         <>
             <Container>
@@ -43,7 +47,7 @@ function Login() {
                                         </InputBox>
                                     </InputBoxContainer>
                                 </StyleForm>
-                                <Botao>Continuar</Botao>
+                                <Botao><p onClick={goToLogin}>Continuar</p></Botao>
                             </ContainerFormulario>
                         </Divi>
                     </Form>
@@ -54,4 +58,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Cadastro;

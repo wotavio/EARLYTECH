@@ -1,4 +1,4 @@
-import { Container, ImgContainer, RowImg, H1, Butao } from "./styled";
+import { Container, ImgContainer, RowImg, H1 } from "./styled";
 import Artigos from '../../assets/Artigos.png';
 import Ferramentas from '../../assets/Ferramentas.png';
 import Video from '../../assets/Video.png';

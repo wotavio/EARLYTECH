@@ -1,5 +1,5 @@
 import LogoImg from "../../assets/Early.png";
-import { Creditos, Direita, Esquerda, FooterContainer, Logo, Row, Texto, Texto1, Titulo, Titulo1 } from "./styled";
+import { Creditos, Direita, Esquerda, FooterContainer, Logo, Texto, Texto1, Titulo, Titulo1 } from "./styled";
   
   function Footer() {
     return (

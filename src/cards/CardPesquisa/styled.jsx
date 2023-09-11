@@ -33,6 +33,8 @@ export const Container = styled.figure`
   gap: 48px;
   border-radius: 20px;
   background-image: url(${ContainerImg});
+  background-size: cover;
+  background-position: center;
 `;
 
 export const BotaoPesquisa = styled.button `

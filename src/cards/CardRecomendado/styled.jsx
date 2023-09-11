@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const Container = styled.section`
   margin-top: 10vw;
   margin-right: 5vw;
+  margin-bottom: 15%;
   display: grid;
   flex-direction: column;
   justify-content: center;
@@ -43,11 +44,34 @@ export const H1 = styled.h1`
   margin: 2vw;
   
 `;
+
+export const Perfil = styled.button`
+  color: white;
+  margin-left: 45%;
+  margin-top: 5%;
+  display: flex;
+  width: 149px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--button-colour, #6a71f1);
+  border: none;
+`;
 export const RowCard = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: -5%;
+`;
+
+export const RowBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 37%;
 `;
 
 

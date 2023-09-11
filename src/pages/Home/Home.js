@@ -5,16 +5,18 @@ import CardMateriais from "../../cards/CardMateriais/CardMateriais";
 import CardRecomendado from "../../cards/CardRecomendado/CardRecomendado";
 import CardProf from "../../cards/CardProf/CardProf";
 
+
 function Home() {
-    return <> 
+
+    return ( <> 
     <Header/>
     <CardPesquisa/>
     <CardMateriais/>
     <CardRecomendado/>
     <CardProf/>
     <Footer/>
-
-    </>;
+    </>
+    );
   }
   export default Home;
   

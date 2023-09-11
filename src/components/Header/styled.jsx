@@ -46,11 +46,6 @@ export const ImgContainer = styled.img`
   padding-left: 10vw;
 `;
 
-// export const Logo = styled.img`
-//     width: 5vw;
-//     height: 8vh;
-//     padding-left: 1vw;
-// `
 export const Perfil = styled.button`
   color: white;
   margin-left: 2vw;

@@ -1,6 +1,5 @@
 // import { Box, Flex } from "@chakra-ui/react"
 import { Container, Esquerda, H1, Input, InputBox } from "./styled";
-import ContainerImg from "../../assets/Pesquisa.png";
 
 function CardPesquisa() {
   return (
