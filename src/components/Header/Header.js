@@ -1,8 +1,12 @@
 
   import LogoImg from "../../assets/Early.png";
 import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos, InputBox, Input } from "./styled";
-  
+import { Link, useNavigate } from "react-router-dom"
+
   function Header() {
+    const navigate = useNavigate()
+    const goToPerfil = () => {
+        navigate('/config')}
     return (
       <>
         <Fundo>
@@ -16,7 +20,7 @@ import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos, 
             <InputBox>
              <Input id="firstname" type="text" name="firstname" placeholder="🔍  Pesquisar..." required></Input>
             </InputBox>
-            <Perfil>Perfil</Perfil>
+            <Link to='/config'><Perfil>Perfil</Perfil></Link>
           </SecondContainer>
         </Fundo>
       </>
