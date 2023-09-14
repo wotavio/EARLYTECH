@@ -11,10 +11,10 @@ import { Link, useNavigate } from "react-router-dom"
       <>
         <Fundo>
           <FirstContainer>
-            <ImgContainer src={LogoImg} alt="Logo" />
+          <Link to='/home'><ImgContainer src={LogoImg} alt="Logo" /></Link>
           </FirstContainer>
           <SecondContainer>
-            <Topicos>HOME</Topicos>
+          <Link to='/home'><Topicos>HOME</Topicos></Link>
             <Topicos>MATERIAIS</Topicos>
             <Topicos>SUPORTE</Topicos>
             <InputBox>
