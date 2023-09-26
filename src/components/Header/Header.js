@@ -1,12 +1,9 @@
-
-  import LogoImg from "../../assets/Early.png";
-import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos, InputBox, Input } from "./styled";
-import { Link, useNavigate } from "react-router-dom"
+import LogoImg from "../../assets/Early.png";
+import { FirstContainer, Fundo, ImgContainer, SecondContainer, Topicos, InputBox, Input, ImgPerfil } from "./styled";
+import { Link } from "react-router-dom"
+import PerfilIcon from "../../assets/perfil.png";
 
   function Header() {
-    const navigate = useNavigate()
-    const goToPerfil = () => {
-        navigate('/config')}
     return (
       <>
         <Fundo>
@@ -15,12 +12,12 @@ import { Link, useNavigate } from "react-router-dom"
           </FirstContainer>
           <SecondContainer>
           <Link to='/home'><Topicos>HOME</Topicos></Link>
-            <Topicos>MATERIAIS</Topicos>
+          <Link to='/materiais'><Topicos>MATERIAIS</Topicos></Link>
             <Topicos>SUPORTE</Topicos>
             <InputBox>
              <Input id="firstname" type="text" name="firstname" placeholder="🔍  Pesquisar..." required></Input>
             </InputBox>
-            <Link to='/config'><Perfil>Perfil</Perfil></Link>
+            <Link to='/config'><ImgPerfil src={PerfilIcon}/></Link>
           </SecondContainer>
         </Fundo>
       </>

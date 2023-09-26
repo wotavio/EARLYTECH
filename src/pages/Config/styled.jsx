@@ -17,7 +17,6 @@ export const Baner = styled.div`
     justify-content: center;
     height: 55vh;
     gap: 3vw;
-    margin-top: 5vh;
 `
 
 export const Name = styled.h1`
@@ -59,7 +58,7 @@ export const SaveButton = styled.button`
     margin-left: 10px;
     justify-content: center;
     display: flex;
-    background-color: #1E2772;
+    background-color:  #6a71f1;
     border: 2%;
     border-radius: 10px;
     color: white;
@@ -88,13 +87,14 @@ export const BannerImg = styled.img`
     width: 100%;
     height: 80%;
     align-items: center;
+    border-radius: 20px;
 `
 export const LogoPerfil = styled.img`
     width: 20vh;
     border-radius: 50%;
     height: 20vh;
     align-items: center;
-    border: 10px solid #1E2772;
+    border: 10px solid  #6a71f1;
     margin-left: 3vw;
     margin-top: -10vh;
 `
@@ -164,25 +164,3 @@ export const Entrada = styled.div`
     gap: 1vh;
     align-items: flex-start;
 `
-
-// export const DisplayButton = styled.div`
-//     margin-left: 14%;
-//     margin-top: 2vw;
-//     flex-direction: row;
-//     display: flex;
-// `
-
-// export const CustomButton = styled.button`
-//     height: 7vh;
-//     width: 80px;
-//     align-items: center;
-//     border: none;
-//     margin-left: 10px;
-//     justify-content: center;
-//     display: flex;
-//     background: var(--button-colour, #6a71f1);
-//     border: 2%;
-//     border-radius: 10px;
-//     color: white;
-//     font-size: 12px;
-// `
