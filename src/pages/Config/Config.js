@@ -4,18 +4,8 @@ import Banner from "../../assets/Banner.png";
 import Perfil from "../../assets/LogoPerfil.png";
 import Footer from "../../components/Footer/Footer"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import { useEffect } from "react"
-import { useNavigate } from "react-router-dom";
 
 function Config() {
-    const navigate = useNavigate()
-
-    useEffect(()=>{
-        const token = localStorage.getItem('token')
-        if(!token){
-            navigate('/')
-        }
-    }, [navigate])
 
     return (
         <>

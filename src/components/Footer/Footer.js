@@ -16,7 +16,7 @@ import { Creditos, Direita, Esquerda, FooterContainer, Logo, Texto, Texto1, Titu
           <Direita>
             <Creditos>
               <Titulo1>Integrantes</Titulo1>
-              <Texto1>Otávio Dantas</Texto1>
+              <Texto1>Otávio Weiand</Texto1>
             </Creditos>
             <Creditos>
               <Titulo1>Orientadores</Titulo1>
