@@ -4,6 +4,7 @@ import Cadastro from "../pages/Cadastro/cadastro"
 import Home from "../pages/Home/Home";
 import Config from "../pages/Config/Config";
 import Materiais from "../pages/Materiais/Materiais";
+import Suporte from "../pages/Suporte/Suporte";
 
 function Rotas(){
     return(
@@ -14,6 +15,7 @@ function Rotas(){
                 <Route path='/home' element={<Home/>}/>
                 <Route path='/config' element={<Config/>}/>
                 <Route path='/materiais' element={<Materiais/>}/>
+                <Route path='/suporte' element={<Suporte/>}/>
             </Routes>
         </BrowserRouter>
     )

@@ -7,7 +7,7 @@ import axios from "axios"
 function Login() {
     const navigate = useNavigate()
         
-    const goToHome = () => {
+    const goToHome = () => {git 
         navigate('/home')
     };
     

@@ -13,7 +13,7 @@ import PerfilIcon from "../../assets/perfil.png";
           <SecondContainer>
           <Link to='/home'><Topicos>HOME</Topicos></Link>
           <Link to='/materiais'><Topicos>MATERIAIS</Topicos></Link>
-            <Topicos>SUPORTE</Topicos>
+          <Link to='/suporte'><Topicos>SUPORTE</Topicos></Link>
             <InputBox>
              <Input id="firstname" type="text" name="firstname" placeholder="🔍  Pesquisar..." required></Input>
             </InputBox>
