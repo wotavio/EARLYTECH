@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import { Main, InfosLabel, Topicos, Forms, FormCustom, CustomInput, DisplayButton, SaveButton, Divisor, Entrada, FormCustom1, Divisor1 } from "./styled"
+import { Main, InfosLabel, Topicos, Forms, FormCustom, CustomInput, SaveButton, Divisor, Entrada, FormCustom1, Divisor1, Container, H1, Esquerda, InputBox } from "./styled"
 
 
 
@@ -13,8 +13,8 @@ function Suporte() {
     <Topicos>
                         <Tabs>
                             <TabList>
-                                <Tab>Perfil</Tab>
-                                <Tab>Senha</Tab>
+                                <Tab>Suporte</Tab>
+                                <Tab>Contato</Tab>
                             </TabList>
                             <TabPanels>
                                 <TabPanel>
@@ -22,22 +22,8 @@ function Suporte() {
                                         <FormCustom>
                                             <Divisor>
                                                 <Entrada>
-                                                    <InfosLabel>Nome de Usuário</InfosLabel>
-                                                    <CustomInput type="text" placeholder="Nome de Usuário" />
-                                                </Entrada>
-                                                <Entrada>
-                                                    <InfosLabel>Nome Completo</InfosLabel>
-                                                    <CustomInput type="text" placeholder="Nome Completo" />
-                                                </Entrada>
-                                            </Divisor>
-                                            <Divisor>
-                                                <Entrada>
-                                                    <InfosLabel>Email</InfosLabel>
-                                                    <CustomInput type="email" placeholder="Email" />
-                                                </Entrada>
-                                                <Entrada>
-                                                    <InfosLabel>Ocupação</InfosLabel>
-                                                    <CustomInput type="text" placeholder="Ocupação" />
+                                                    <InfosLabel>Nos conte seu problema</InfosLabel>
+                                                    <CustomInput type="text" placeholder="Escreva aqui..." />
                                                 </Entrada>
                                             </Divisor>
                                         </FormCustom>
@@ -47,20 +33,14 @@ function Suporte() {
                                     <Forms>
                                         <FormCustom1>
                                             <Divisor1>
-                                                <Entrada>
-                                                    <InfosLabel>Senha atual</InfosLabel>
-                                                    <CustomInput type="text" placeholder="Nome" />
-                                                </Entrada>
-                                            </Divisor1>
-                                            <Divisor1>
-                                                <Entrada>
-                                                    <InfosLabel>Senha nova</InfosLabel>
-                                                    <CustomInput type="password" placeholder="Senha nova" />
-                                                </Entrada>
-                                                <Entrada>
-                                                    <InfosLabel>Repetir senha</InfosLabel>
-                                                    <CustomInput type="password" placeholder="Repetir sua senha nova" />
-                                                </Entrada>
+                                               <Container>
+                                               <Esquerda>
+                                                        <H1>Clique aqui para entrar em contato</H1>
+                                                        <InputBox>
+                                                        <SaveButton class="submit" id="submit" type="submit">Click here</SaveButton>
+                                                        </InputBox>
+                                                        </Esquerda>
+                                               </Container>
                                             </Divisor1>
                                         </FormCustom1>
                                     </Forms>

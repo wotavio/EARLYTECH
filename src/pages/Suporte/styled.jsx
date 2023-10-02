@@ -1,13 +1,17 @@
 import { styled } from "styled-components";
+import ContainerImg from "../../assets/Pesquisa.png";
 
+
+export const InputBox = styled.div`
+    display: flex;
+    flex-direction: column;
+`
 
 export const Main = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    gap: 1vw;
-    margin-bottom: 15vw;
 `
 
 export const Baner = styled.div`
@@ -31,10 +35,6 @@ export const Name = styled.h1`
     margin-left: 13vw;
     margin-top: -8vh;
     `
-export const DisplayButton = styled.div`
-    flex-direction: row;
-    display: flex;
-`
 
 export const CancelButton = styled.button`
     height: 7vh;
@@ -49,13 +49,33 @@ export const CancelButton = styled.button`
     border-radius: 10px;
     color: black;
 `
+export const H1 = styled.label`
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  text-align: center;
+  font-family: Arial Black;
+  font-size: 200%;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 60%;
+  margin-top: 8vw;
+`;
+export const Esquerda = styled.div`
+width: 80%;
+display: flex;
+flex-direction: column;
+align-content: space-between;
+`
 
 export const SaveButton = styled.button`
     height: 7vh;
     width: 6vw;
     align-items: center;
     border: none;
-    margin-left: 10px;
+    margin-left: 75%;
+    margin-top: 3vw;
     justify-content: center;
     display: flex;
     background-color:  #6a71f1;
@@ -132,17 +152,33 @@ export const InfosLabel = styled.form`
 
 export const CustomInput = styled.input`
     background-color: white;
-    height: 7vh;
+    height: 35vh;
     border: 1px solid #000;
     border-radius: 10px;
-    width: 25vw;
+    width: 50vw;
     padding: 0 0 0 1vw;
+    margin-left: 10vw;
 
     ::placeholder{
         margin-right: 5px;
-        padding: 10px;;
+        // padding: 10px;;
     }
 `
+export const Container = styled.figure`
+  position: relative;
+  display: flex;
+  width: 99vw;
+  height: 25vw;
+  flex-direction: column;
+  justify-content: column;
+  align-items: center;
+  gap: 48px;
+  border-radius: 20px;
+  background-image: url(${ContainerImg});
+  background-size: cover;
+  background-position: center;
+  margin-left:-3vw;
+`;
 
 export const Divisor = styled.div`
     display: flex;
@@ -154,8 +190,6 @@ export const Divisor = styled.div`
 export const Divisor1 = styled.div`
     display: flex;
     flex-direction: row;
-    width: 25vw;
-    gap: 5vh;
 `
 
 export const Entrada = styled.div`

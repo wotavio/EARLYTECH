@@ -1,6 +1,6 @@
 import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo, Palavra } from "./styled"
 import ImagemPrincipal from "../../assets/Early.png"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
