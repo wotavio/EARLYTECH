@@ -1,7 +1,9 @@
 import {ChakraProvider, extendTheme} from "@chakra-ui/react"
 import Rotas from "./Rotas/Rotas";
+import { useState } from "react";
 
 function App(){
+  const [news, setNews] = useState([])
   const styles = {
     global: () => ({
       body: {
@@ -17,6 +19,7 @@ function App(){
     <>
     <ChakraProvider theme={theme}>
       <Rotas/>
+      <Rotas news={news} setNews={setNews}/>
     </ChakraProvider>
     </>
   );

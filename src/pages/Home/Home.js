@@ -4,9 +4,10 @@ import Footer from "../../components/Footer/Footer";
 import CardMateriais from "../../cards/CardMateriais/CardMateriais";
 import CardRecomendado from "../../cards/CardRecomendado/CardRecomendado";
 import CardProf from "../../cards/CardProf/CardProf";
+import { Card } from "@chakra-ui/react";
 
 
-function Home() {
+function Home(props) {
 
     return ( <> 
     <Header/>
@@ -14,6 +15,8 @@ function Home() {
     <CardMateriais/>
     <CardRecomendado/>
     <CardProf/>
+    <Card news={props.news}
+    setNews={props.setNews}/>
     <Footer/>
     </>
     );
