@@ -18,7 +18,6 @@ function App(){
   return (
     <>
     <ChakraProvider theme={theme}>
-      <Rotas/>
       <Rotas news={news} setNews={setNews}/>
     </ChakraProvider>
     </>

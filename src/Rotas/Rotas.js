@@ -6,7 +6,7 @@ import Config from "../pages/Config/Config";
 import Materiais from "../pages/Materiais/Materiais";
 import Suporte from "../pages/Suporte/Suporte";
 
-function Rotas(){
+function Rotas(props){
     return(
         <BrowserRouter>
             <Routes>
