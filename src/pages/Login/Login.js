@@ -27,8 +27,8 @@ function Login() {
         e.preventDefault()
 
         const credentials = {email, password}
-    
-      axios.post('http://localhost:8000/login', credentials, {
+        
+        axios.post('http://localhost:8000/login', credentials, {
     
       headers: {
         'Content-Type': 'application/json',
