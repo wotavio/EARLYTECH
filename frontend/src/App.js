@@ -17,9 +17,9 @@ function App(){
 
   return (
     <>
-    <ChakraProvider theme={theme}>
-      <Rotas news={news} setNews={setNews}/>
-    </ChakraProvider>
+      <ChakraProvider theme={theme}>
+        <Rotas news={news} setNews={setNews}/>
+      </ChakraProvider>
     </>
   );
 }

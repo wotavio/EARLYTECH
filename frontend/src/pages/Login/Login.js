@@ -68,7 +68,7 @@ function Login() {
                                             <Input value={password} onChange = {(e)=>setPassword(e.target.value)} type="password" placeholder="Digite sua senha" required></Input>
                                         </InputBox>
                                         <InputBox>
-                                        <Link to='/Home'><Botao class="submit" id="submit" value="Entrar" type="submit">Continuar</Botao></Link>
+                                        <Botao onClick={goToHome} class="submit" id="submit" value="Entrar" type="submit">Continuar</Botao>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <Link to='/cadastro'><Palavra>cadastrar-se</Palavra></Link>
