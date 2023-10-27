@@ -1,6 +1,6 @@
 import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo, Palavra } from "./styled"
 import ImagemPrincipal from "../../assets/Early.png"
-import { Link, useNavigate, } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
@@ -27,8 +27,8 @@ function Login() {
         e.preventDefault()
 
         const credentials = {email, password}
-        
-        axios.post('http://localhost:8000/login', credentials, {
+    
+      axios.post('http://localhost:8000/login', credentials, {
     
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function Login() {
                                             <Input value={password} onChange = {(e)=>setPassword(e.target.value)} type="password" placeholder="Digite sua senha" required></Input>
                                         </InputBox>
                                         <InputBox>
-                                        <Botao onClick={goToHome} class="submit" id="submit" value="Entrar" type="submit">Continuar</Botao>
+                                        <Link to='/home'><Botao onClick={goToHome} class="submit" id="submit" value="Entrar" type="submit">Continuar</Botao></Link>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <Link to='/cadastro'><Palavra>cadastrar-se</Palavra></Link>

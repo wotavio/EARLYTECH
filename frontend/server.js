@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-const news = require('./data');
 
 const app = express();
 const port = 8000;
@@ -30,10 +29,6 @@ app.post('/login', (req, res) => {
         return res.status(401).json({ error: 'Credenciais inválidas.' });
     }
 });
-
-app.get('/news', (req, res) => {
-    res.json(news);
-})
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

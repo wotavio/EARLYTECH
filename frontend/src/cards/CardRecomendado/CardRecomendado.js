@@ -1,7 +1,5 @@
 import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil } from "./styled";
-import mateapi from "../../api/api.json"
-import { Link } from "react-router-dom"
-import Cardmat from "../CardApi/CardApi";
+import Recomendado from '../../assets/Recomendado.png';
 import {
   Menu,
   MenuButton,
@@ -11,56 +9,52 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-function CardRecomendado({ url, nome }) {
-  console.log(mateapi)
+function CardRecomendado() {
   return (
     <>
       <Container>
         <RowBox>
-          <H1>RECOMENDADOS</H1>
-          <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-              FILTRAR
-            </MenuButton>
-            <MenuList>
-              <MenuItem>Artigos</MenuItem>
-              <MenuItem>Videos</MenuItem>
-              <MenuItem>Ferramentas</MenuItem>
-            </MenuList>
-          </Menu>
-        </RowBox>
+        <H1>RECOMENDADOS</H1>
+        <Menu>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    FILTRAR
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Artigos</MenuItem>
+    <MenuItem>Videos</MenuItem>
+    <MenuItem>Ferramentas</MenuItem>
+  </MenuList>
+</Menu>
+</RowBox>
         <RowCard>
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
         </RowCard>
         <RowCard>
-        <Cardmat/>
-          <Cardmat/>
-          <Cardmat/>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
         </RowCard>
-        <Link to='/materiais'><Perfil>Veja mais</Perfil></Link>
+        <Perfil>Veja mais</Perfil>
       </Container>
     </>
   );

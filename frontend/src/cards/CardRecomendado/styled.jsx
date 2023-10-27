@@ -48,6 +48,7 @@ export const H1 = styled.h1`
 export const Perfil = styled.button`
   color: white;
   margin-left: 45%;
+  margin-top: 5%;
   display: flex;
   width: 149px;
   padding: 8px 20px;
@@ -62,6 +63,7 @@ export const RowCard = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: -5%;
 `;
 
 export const RowBox = styled.div`
@@ -81,6 +83,7 @@ export const ImgContainer = styled.img`
   justify-content: space-between;
 `;
 export const Box = styled.div`
+    margin-bottom: 2vw;
     display: flex;
     flex-direction: column;
     width: 100%;
