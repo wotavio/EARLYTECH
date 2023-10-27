@@ -38,6 +38,7 @@ export const SecondContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-left: 3vw;
 `;
 
 export const ImgContainer = styled.img`
@@ -45,10 +46,15 @@ export const ImgContainer = styled.img`
   height: 13vh;
   padding-left: 10vw;
 `;
+export const ImgPerfil = styled.img`
+  width: 8vw;
+  height: 10vh;
+  padding-left: 2vw;
+  
+`;
 
 export const Perfil = styled.button`
   color: white;
-  margin-left: 2vw;
   display: flex;
   width: 149px;
   padding: 8px 20px;
@@ -64,7 +70,7 @@ export const Topicos = styled.button`
   color: #667294;
   border: none;
   background: none;
-  font-family: Lato;
+  font-family: Arial Black;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;

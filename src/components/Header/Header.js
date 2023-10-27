@@ -1,22 +1,23 @@
+import LogoImg from "../../assets/Early.png";
+import { FirstContainer, Fundo, ImgContainer, SecondContainer, Topicos, InputBox, Input, ImgPerfil } from "./styled";
+import { Link } from "react-router-dom"
+import PerfilIcon from "../../assets/perfil.png";
 
-  import LogoImg from "../../assets/Early.png";
-import { FirstContainer, Fundo, ImgContainer, Perfil, SecondContainer, Topicos, InputBox, Input } from "./styled";
-  
   function Header() {
     return (
       <>
         <Fundo>
           <FirstContainer>
-            <ImgContainer src={LogoImg} alt="Logo" />
+          <Link to='/home'><ImgContainer src={LogoImg} alt="Logo" /></Link>
           </FirstContainer>
           <SecondContainer>
-            <Topicos>HOME</Topicos>
-            <Topicos>MATERIAIS</Topicos>
-            <Topicos>SUPORTE</Topicos>
+          <Link to='/home'><Topicos>HOME</Topicos></Link>
+          <Link to='/materiais'><Topicos>MATERIAIS</Topicos></Link>
+          <Link to='/suporte'><Topicos>SUPORTE</Topicos></Link>
             <InputBox>
              <Input id="firstname" type="text" name="firstname" placeholder="🔍  Pesquisar..." required></Input>
             </InputBox>
-            <Perfil>Perfil</Perfil>
+            <Link to='/config'><ImgPerfil src={PerfilIcon}/></Link>
           </SecondContainer>
         </Fundo>
       </>

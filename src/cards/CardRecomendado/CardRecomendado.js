@@ -41,7 +41,7 @@ function CardRecomendado() {
           </Box>
         </RowCard>
         <RowCard>
-        <Box>
+          <Box>
           <ImgContainer src={Recomendado} />
           <p>Nome do material</p>
           </Box>
