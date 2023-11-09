@@ -6,22 +6,22 @@ require("dotenv").config();
 const bcrypt = require('bcrypt');
 // Importar pacote que implementa o protocolo JSON Web Token
 const jwt = require('jsonwebtoken');
-
+ 
 // Authentication
 async function login(request, response) {
     // Preparar o comando de execução no banco
-    const query = "SELECT * FROM usuarios WHERE `email` = ?";
-    
+    const query = "SELECT * FROM users WHERE `email` = ?";
+   
     // Recuperar credenciais informadas
     const params = Array(
         request.body.email
     );
-
+ 
     // Executa a ação no banco e valida os retornos para o client que realizou a solicitação
     connection.query(query, params, (err, results) => {
         try {            
             if (results.length > 0) {                
-                bcrypt.compare(request.body.senha, results[0].senha, (err, result) => {
+                bcrypt.compare(request.body.password, results[0].password, (err, result) => {
                     if (err) {                        
                         return response.status(401).send({
                             msg: 'Email or password is incorrect!'
@@ -29,8 +29,8 @@ async function login(request, response) {
                     } else if(result) {
                         const id = results[0].id;
                         const token = jwt.sign({ userId: id },'the-super-strong-secrect',{ expiresIn: 300 });
-                        results[0]['token'] = token; 
-                        
+                        results[0]['token'] = token;
+                       
                         response
                         .status(200)
                         .json({
@@ -38,9 +38,14 @@ async function login(request, response) {
                             message: `Sucesso! Usuário conectado.`,
                             data: results
                         });
+                    } else {
+                        // Senha incorreta
+                        response.status(401).send({
+                            msg: 'Email ou senha incorretos!'
+                        });
                     }
                 })
-                
+               
             } else {
                 response
                     .status(400)
@@ -61,7 +66,8 @@ async function login(request, response) {
         }
     });
 }
-
+ 
+ 
 module.exports = {
     login
 }
