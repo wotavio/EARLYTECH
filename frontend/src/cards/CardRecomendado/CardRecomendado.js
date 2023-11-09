@@ -31,31 +31,43 @@ function CardRecomendado() {
         </RowBox>
         <RowCard>
         <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
-          <Box>
+        </Box>
+        <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
-          <Box>
+        </Box>
+        <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
+        </Box>
         </RowCard>
         <RowCard>
         <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
-          <Box>
+        </Box>
+        <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
-          <Box>
+        </Box>
+        <Box>
+        <Link to='/PgMaterial'>
           <ImgContainer src={Recomendado} />
+          </Link>
           <p>Nome do material</p>
-          </Box>
+        </Box>
         </RowCard>
         <Link to='/materiais'><Perfil>Veja mais</Perfil></Link>
       </Container>

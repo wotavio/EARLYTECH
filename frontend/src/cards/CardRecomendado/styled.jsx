@@ -89,4 +89,5 @@ export const Box = styled.div`
     font-family: Arial Black;
     font-size: 18px;
     font-style: normal;
+    margin-bottom: 5vw;
 `
