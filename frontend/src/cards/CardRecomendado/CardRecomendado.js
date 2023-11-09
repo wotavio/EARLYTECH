@@ -1,7 +1,8 @@
 import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil } from "./styled";
-import mateapi from "../../api/api.json"
+import Recomendado from "../../assets/Recomendado.png"
+
 import { Link } from "react-router-dom"
-import Cardmat from "../CardApi/CardApi";
+
 import {
   Menu,
   MenuButton,
@@ -11,8 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-function CardRecomendado({ url, nome }) {
-  console.log(mateapi)
+function CardRecomendado() {
   return (
     <>
       <Container>
@@ -30,35 +30,32 @@ function CardRecomendado({ url, nome }) {
           </Menu>
         </RowBox>
         <RowCard>
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
-        {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
+        <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
         </RowCard>
         <RowCard>
-        <Cardmat/>
-          <Cardmat/>
-          <Cardmat/>
+        <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
+          <Box>
+          <ImgContainer src={Recomendado} />
+          <p>Nome do material</p>
+          </Box>
         </RowCard>
         <Link to='/materiais'><Perfil>Veja mais</Perfil></Link>
       </Container>

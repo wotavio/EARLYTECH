@@ -12,13 +12,12 @@ function Rotas(props){
         <BrowserRouter>
             <Routes>
                 <Route index element={<Login/>}/>
-                <Route path="/cadastro" element={<Cadastro/>}/>
-                <Route path='/home' element={<Home/>}/>
-                <Route path='home' element={<Home news={props.nes} setNews={props.setNews}/>}/>
-                <Route path='/config' element={<Config/>}/>
-                <Route path='/materiais' element={<Materiais/>}/>
-                <Route path='/suporte' element={<Suporte/>}/>
-                <Route path='/PgMaterial' element={<PgMaterial/>}/>
+                <Route path="cadastro" element={<Cadastro/>}/>
+                <Route path='home' element={<Home/>}/>
+                <Route path='config' element={<Config/>}/>
+                <Route path='materiais' element={<Materiais/>}/>
+                <Route path='suporte' element={<Suporte/>}/>
+                <Route path='PgMaterial' element={<PgMaterial/>}/>
             </Routes>
         </BrowserRouter>
     )

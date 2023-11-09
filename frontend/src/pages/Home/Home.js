@@ -5,29 +5,18 @@ import CardMateriais from "../../cards/CardMateriais/CardMateriais";
 import CardRecomendado from "../../cards/CardRecomendado/CardRecomendado";
 import CardProf from "../../cards/CardProf/CardProf";
 import { Card } from "@chakra-ui/react";
-import mateapi from "../../api/api.json"
 
-function Home(props) {
 
-    console.log(mateapi)
-    return ( <> 
-    <Header/>
-    <CardPesquisa/>
-    <CardMateriais/>
-    {mateapi.map((dado) => {
-      return(<>
-        <CardRecomendado key={dado.id}
-        url={dado.imagem}
-        nome={dado.nome}
-        />
-      </>)
-    })}
-    <CardProf/>
-    <Card news={props.news}
-    setNews={props.setNews}/>
-    <Footer/>
+function Home() {
+  return (
+    <>
+      <Header />
+      <CardPesquisa />
+      <CardMateriais />
+      <CardRecomendado/>
+      <CardProf />
+      <Footer />
     </>
-    );
-  }
-  export default Home;
-  
+  );
+}
+export default Home;

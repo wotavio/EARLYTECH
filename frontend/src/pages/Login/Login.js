@@ -1,54 +1,52 @@
-import { Container, Form, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo, Palavra } from "./styled"
+import { Container, FormImage, Image, InputBox, Input, Label, ContainerForm, Divi, ContainerFormulario, StyleForm, Botao, InputBoxContainer, Titulo, Palavra, Formulario } from "./styled"
 import ImagemPrincipal from "../../assets/Early.png"
-import { Link, useNavigate, } from "react-router-dom"
-import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import React, { useState } from "react"
 import axios from "axios"
+import { baseUrl } from "../../services/api"
 
 function Login() {
-    const navigate = useNavigate()
-        
-    const goToHome = () => {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
+ 
+    const goToHome = () =>{
         navigate('/home')
-    };
-    
+    }
+ 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    const [email, setEmail] = useState('')
-    const [password,setPassword] = useState('')
+        const formData = {
+            email: email,
+            password: password
+        }
 
-    const saveUserInfoLocalStorage = (token)=>{
-
-        localStorage.setItem('token', token)
-    
-        localStorage.setItem('email', email)
-    
-      }
-    
-      const handleSubmit = (e)=>{
-        e.preventDefault()
-
-        const credentials = {email, password}
-        
-        axios.post('http://localhost:8000/login', credentials, {
-    
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    
-      }). then(response =>{
-      alert(response.data.message)
-      saveUserInfoLocalStorage(response.data.token)
-      goToHome()
-      })
-    
-      .catch(error => console.log(error))
-    
-      }
+        console.log(formData)
+ 
+        axios.post(`${baseUrl}/auth/login`, formData)
+            .then(function (response) {
+                console.log(response)
+                localStorage.setItem('user', response.data.data[0].id)
+                localStorage.setItem('token', response.data.data[0].token)
+                alert(response.data.message)
+                goToHome()
+            })
+            .catch(function (error) {
+                alert(error.response.data.msg)
+            });
+ 
+            setEmail('')
+            setPassword('')
+    }
+ 
 
     return (
         <>
             <Container>
                 <ContainerForm  >
-                    <Form onSubmit={handleSubmit}>
+                    <Formulario>
                         <Divi>
                             <FormImage>
                                 <Image src={ImagemPrincipal} />
@@ -59,23 +57,31 @@ function Login() {
                                     <InputBoxContainer>
                                         <InputBox>
                                             <Label for="firstname">Email</Label>
-                                            <Input value={email} onChange = {(e)=>setEmail(e.target.value)} type="email" placeholder="Digite seu email" ></Input>
+                                            <Input type="email" 
+                                            placeholder="Digite seu email" 
+                                            value={email}
+                                            onChange={(e)=>setEmail(e.target.value)}
+                                            required/>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <InputBoxContainer>
                                     <InputBox>
                                             <Label for="firstname">Senha</Label>
-                                            <Input value={password} onChange = {(e)=>setPassword(e.target.value)} type="password" placeholder="Digite sua senha" required></Input>
+                                            <Input type="password" 
+                                            placeholder="Digite sua senha" 
+                                            value={password}
+                                            onChange={(e)=>setPassword(e.target.value)}
+                                            required/>
                                         </InputBox>
                                         <InputBox>
-                                        <Botao onClick={goToHome} class="submit" id="submit" value="Entrar" type="submit">Continuar</Botao>
+                                        <Botao onClick={handleSubmit}>Continuar</Botao>
                                         </InputBox>
                                     </InputBoxContainer>
                                     <Link to='/cadastro'><Palavra>cadastrar-se</Palavra></Link>
                                 </StyleForm>
                             </ContainerFormulario>
                         </Divi>
-                    </Form>
+                    </Formulario>
                 </ContainerForm >
             </Container>
 

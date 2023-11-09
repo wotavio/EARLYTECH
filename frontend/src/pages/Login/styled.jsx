@@ -40,7 +40,7 @@ export const Body = styled.div`
     align-items: center;
     background: #0c0ce94d;
 `
-export const Form = styled.div`
+export const Formulario = styled.div`
     width: 70vw;
     display: flex;
     flex-direction: row;
