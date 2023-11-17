@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const InputBox = styled.div`
     display: flex;
     flex-direction: column;
+    margin-right: 10vw;
 `
 export const Input = styled.input`
     width: 80%;
@@ -13,6 +14,21 @@ export const Input = styled.input`
     box-shadow: 1px 1px 6px #00000064;
     font-size: 0.8rem;
     `
+    
+export const Button = styled.button`
+height: 4vh;
+width: 5vw;
+align-items: center;
+border: none;
+margin-right: -2vw;
+margin-left: 10px;
+justify-content: center;
+display: flex;
+background-color:  #6a71f1;
+border: 2%;
+border-radius: 10px;
+color: white;
+`
 
 
 export const Fundo = styled.div`
@@ -50,7 +66,7 @@ export const ImgPerfil = styled.img`
   width: 8vw;
   height: 10vh;
   padding-left: 2vw;
-  
+  margin-right: 2vw;
 `;
 
 export const Perfil = styled.button`

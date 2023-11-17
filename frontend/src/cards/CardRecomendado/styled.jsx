@@ -74,11 +74,12 @@ export const RowBox = styled.div`
 
 
 export const ImgContainer = styled.img`
-  width: 100%;
-  height: 80%;
+  width: 550px;
+  height: 300px;
   padding-left: 5vw;
   margin-right: 5vw;
   justify-content: space-between;
+  border-radius: 20px;
 `;
 export const Box = styled.div`
     display: flex;

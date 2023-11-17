@@ -12,6 +12,7 @@ function Rotas(props){
         <BrowserRouter>
             <Routes>
                 <Route index element={<Login/>}/>
+                <Route path="login" element={<Login/>}/>
                 <Route path="cadastro" element={<Cadastro/>}/>
                 <Route path='home' element={<Home/>}/>
                 <Route path='config' element={<Config/>}/>
