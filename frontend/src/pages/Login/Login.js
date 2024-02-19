@@ -30,7 +30,7 @@ function Login() {
                 console.log(response)
                 localStorage.setItem('user', response.data.data[0].id)
                 localStorage.setItem('token', response.data.data[0].token)
-                alert(response.data.message)
+                // alert(response.data.message)
                 goToHome()
             })
             .catch(function (error) {

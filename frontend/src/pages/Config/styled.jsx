@@ -12,7 +12,7 @@ export const Main = styled.div`
 
 export const Baner = styled.div`
     flex-direction: row;
-    width: 100%;
+    width: 99vw;
     align-items: center;
     justify-content: center;
     height: 55vh;

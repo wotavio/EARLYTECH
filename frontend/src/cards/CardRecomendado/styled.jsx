@@ -37,11 +37,25 @@ export const H1 = styled.h1`
   color: #23238E;
   text-align: center;
   font-family: Arial Black;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 2vw;
+  margin-left: 2vw;
+  
+`;
+
+export const Titulo = styled.h1`
+  color: #23238E;
+  text-align: center;
+  font-family: Arial Black;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
   margin: 2vw;
+  margin-left: 5vw;
   
 `;
 

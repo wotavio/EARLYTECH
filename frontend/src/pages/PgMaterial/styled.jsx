@@ -13,6 +13,20 @@ export const Container = styled.section`
   width: auto;
   height: auto;
 `
+export const Perfil = styled.button`
+  color: white;
+  margin-top: 8vh;
+  margin-left: 35%;
+  display: flex;
+  width: 149px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: var(--button-colour, #6a71f1);
+  border: none;
+`;
 
 export const Esquerda = styled.div`
     width: auto;

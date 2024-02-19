@@ -84,20 +84,47 @@ console.log(request.body)
         }
     });
 }
- 
- 
-// Função que atualiza o usuário no banco
+
 async function updateUser(request, response) {
-    // Preparar o comando de execução no banco
-    const query = "UPDATE users SET `name` = ?, `password` = ? WHERE `id` = ?";
- 
-    // Recuperar os dados enviados na requisição respectivamente
-    const params = Array(
-        request.body.name,
-        bcrypt.hashSync(request.body.password, 3),        
-        request.params.id  // Recebimento de parametro da rota
-    );
- 
+    const userId = request.params.id;
+    const userData = request.body;
+    console.log(userData)
+    const updateFields = [];
+
+    const params = [];
+
+    if (userData.name !== undefined) {
+        updateFields.push('`name` = ?');
+        params.push(userData.name);
+    }
+    if (userData.password !== undefined) {
+        updateFields.push('`password` = ?');
+        userData.password = bcrypt.hashSync(userData.password, 10);
+        params.push(userData.password);
+    }
+    if (userData.phone !== undefined) {
+        updateFields.push('`phone` = ?');
+        params.push(userData.phone);
+    }
+    if (userData.email !== undefined) {
+        updateFields.push('`email` = ?');
+        params.push(userData.email);
+    }
+
+    if (updateFields.length === 0) {
+        response.status(400).json({
+            success: false,
+            message: "Nenhum campo para atualizar foi fornecido."
+        });
+        return;
+    }
+
+    // Adiciona o userId como último parâmetro para o WHERE
+    params.push(userId);
+
+    const query = `UPDATE users SET ${updateFields.join(', ')} WHERE id = ?`;
+    // const params = [...Object.values(userData), userId]
+
     // Executa a ação no banco e valida os retornos para o client que realizou a solicitação
     connection.query(query, params, (err, results) => {
         try {
@@ -129,6 +156,7 @@ async function updateUser(request, response) {
         }
     });
 }
+
  
 // Função que remove usuário no banco
 async function deleteUser(request, response) {

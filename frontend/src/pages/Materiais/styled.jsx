@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.section`
-  margin-top: 10vw;
+  margin-top: 5vw;
   margin-right: 5vw;
   margin-bottom: 15%;
   display: grid;
@@ -33,18 +33,31 @@ export const Label = styled.label`
     font-weight: 600;
     color: #000000c0;
     `
-export const H1 = styled.h1`
-  color: #23238E;
-  text-align: center;
-  font-family: Arial Black;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  margin: 2vw;
-  margin-left: 8vw;
+    export const H1 = styled.h1`
+    color: #23238E;
+    text-align: center;
+    font-family: Arial Black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 2vw;
+    margin-left: 2vw;
+    
+  `;
   
-`;
+  export const Titulo = styled.h1`
+    color: #23238E;
+    text-align: center;
+    font-family: Arial Black;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 2vw;
+    margin-left: 8vw;
+    
+  `;
 
 export const Perfil = styled.button`
   color: white;
@@ -75,11 +88,13 @@ export const RowBox = styled.div`
 
 
 export const ImgContainer = styled.img`
-  width: 100%;
-  height: 80%;
+  width: 550px;
+  height: 300px;
   padding-left: 5vw;
   margin-right: 5vw;
   justify-content: space-between;
+  margin-top: 8vh;
+  border-radius: 20px;
 `;
 export const Box = styled.div`
     display: flex;

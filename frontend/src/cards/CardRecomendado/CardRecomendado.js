@@ -1,5 +1,4 @@
-import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil } from "./styled";
-import Recomendado from "../../assets/Recomendado.png"
+import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil, Titulo } from "./styled";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -14,80 +13,89 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-function CardRecomendado() {
 
-  const [recommendation, setRecommendation] = useState({});
+function CardRecomendado() {
+  const [recommendations, setRecommendations] = useState([]);
+  const [selectedRecommendation, setSelectedRecommendation] = useState(null);
+  const [filterType, setFilterType] = useState(null);
+
 
   useEffect(() => {
-    async function fetchRecommendation() {
+    async function fetchRecommendations() {
       try {
-        const response = await axios.get('http://localhost:3008/api/posts');
-        setRecommendation(response.data);
+        const responses = await Promise.all([
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          axios.get('http://localhost:3008/api/posts'),
+          // Adicione mais chamadas para obter diferentes recomendações conforme necessário
+        ]);
+
+        const recommendationsData = responses.map(response => response.data);
+        setRecommendations(recommendationsData);
       } catch (error) {
-        console.error('Erro ao buscar recomendação:', error.response.data);
+        console.error('Erro ao buscar recomendações:', error.response.data);
       }
     }
 
-    fetchRecommendation();
+    fetchRecommendations();
   }, []);
+
+  const handleFilter = async (type) => {
+    try {
+      const response = await axios.get(`http://localhost:3008/api/posts/filter/${type}`);
+      setRecommendations(response.data);
+      setFilterType(type);
+    } catch (error) {
+      console.error('Erro ao filtrar recomendações:', error.response.data);
+    }
+  };
+
 
   return (
     <>
       <Container>
         <RowBox>
-          <H1>RECOMENDADOS</H1>
+          <Titulo>RECOMENDADOS</Titulo>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               FILTRAR
             </MenuButton>
             <MenuList>
-              <MenuItem>Artigos</MenuItem>
-              <MenuItem>Videos</MenuItem>
-              <MenuItem>Ferramentas</MenuItem>
+              <MenuItem onClick={() => handleFilter('Artigos')}>Artigos</MenuItem>
+              <MenuItem onClick={() => handleFilter('Video')}>Videos</MenuItem>
+              <MenuItem onClick={() => handleFilter('Ferramenta')}>Ferramentas</MenuItem>
             </MenuList>
           </Menu>
         </RowBox>
+        {/* Primeira linha de recomendações */}
         <RowCard>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
-          {recommendation && (
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
-      )}
+          {recommendations.slice(0, 3).map((recommendation, index) => (
+            <Box key={index} onClick={() => setSelectedRecommendation(recommendation)}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
         </RowCard>
+        {/* Segunda linha de recomendações */}
         <RowCard>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={recommendation.image} alt="Recomendação" />
-          </Link>
-          <h2>{recommendation.title}</h2>
-        </Box>
+          {recommendations.slice(3, 6).map((recommendation, index) => (
+            <Box key={index} onClick={() => setSelectedRecommendation(recommendation)}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
         </RowCard>
         <Link to='/materiais'><Perfil>Veja mais</Perfil></Link>
       </Container>

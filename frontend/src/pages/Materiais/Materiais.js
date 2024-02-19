@@ -1,8 +1,10 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil } from "./styled";
+import { Container, RowCard, ImgContainer, H1, Box, RowBox, Perfil, Titulo } from "./styled";
 import Recomendado from '../../assets/Recomendado.png';
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
   Menu,
   MenuButton,
@@ -13,104 +15,157 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 function Materiais() {
+  
+    const [recommendations, setRecommendations] = useState([]);
+    const [filterType, setFilterType] = useState(null);
+    const [filteredResults, setFilteredResults] = useState([]);
+
+    useEffect(() => {
+      async function fetchRecommendations() {
+        try {
+          const responses = await Promise.all([
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            axios.get('http://localhost:3008/api/posts'),
+            // Adicione mais chamadas para obter diferentes recomendações conforme necessário
+          ]);
+
+          const recommendationsData = responses.map(response => response.data);
+          setRecommendations(recommendationsData);
+          
+        } catch (error) {
+          console.error('Erro ao buscar recomendações:', error.response.data);
+        }
+      }
+    
+      fetchRecommendations();
+    }, []);
+  
+
+    const handleFilter = async (type) => {
+      try {
+        const response = await axios.get(`http://localhost:3008/api/posts/filter/${type}`);
+        setRecommendations(response.data);
+        setFilterType(type);
+      } catch (error) {
+        console.error('Erro ao filtrar recomendações:', error.response.data);
+      }
+    };
+   const reloadPage = () => {
+      window.location.reload();
+    };
   return (<>
     <Header />
     <Container>
       <RowBox>
-        <H1>MATERIAIS</H1>
+        <Titulo>MATERIAIS</Titulo>
         <Menu>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
             FILTRAR
           </MenuButton>
           <MenuList>
-            <MenuItem>Artigos</MenuItem>
-            <MenuItem>Videos</MenuItem>
-            <MenuItem>Ferramentas</MenuItem>
+          <MenuItem onClick={() => handleFilter('Artigos')}>Artigos</MenuItem>
+          <MenuItem onClick={() => handleFilter('Video')}>Videos</MenuItem>
+          <MenuItem onClick={() => handleFilter('Ferramenta')}>Ferramentas</MenuItem>
           </MenuList>
         </Menu>
       </RowBox>
-      <RowCard>
-        <Box>
-          <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-      </RowCard>
-      <RowCard>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-      </RowCard>
-      <RowCard>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-      </RowCard>
-      <RowCard>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-        <Box>
-        <Link to='/PgMaterial'>
-          <ImgContainer src={Recomendado} />
-          </Link>
-          <p>Nome do material</p>
-        </Box>
-      </RowCard>
-      <Link to='/materiais'><Perfil>Veja mais</Perfil></Link>
-    </Container>
+       {/* Primeira linha de recomendações */}
+       <RowCard>
+          {recommendations.slice(0, 3).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+        {/* Segunda linha de recomendações */}
+        <RowCard>
+          {recommendations.slice(3, 6).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+       {/* Primeira linha de recomendações */}
+       <RowCard>
+          {recommendations.slice(6, 9).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+        {/* Segunda linha de recomendações */}
+        <RowCard>
+          {recommendations.slice(9, 12).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+       {/* Primeira linha de recomendações */}
+       <RowCard>
+          {recommendations.slice(12, 15).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+        {/* Segunda linha de recomendações */}
+        <RowCard>
+          {recommendations.slice(15, 18).map((recommendation, index) => (
+            <Box key={index}>
+              <Link to={`/PgMaterial/${recommendation.id}`}>
+                <ImgContainer src={recommendation.image} alt="Recomendação" />
+              </Link>
+              <H1>{recommendation.title}</H1>
+            </Box>
+          ))}
+        </RowCard>
+        <Link to='/materiais' onClick={reloadPage}><Perfil>Veja mais</Perfil></Link>
+      </Container>
     <Footer />
   </>
   );

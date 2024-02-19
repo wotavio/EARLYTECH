@@ -21,6 +21,7 @@ async function findUser(request, response) {
                     id: results[0].id,
                     email: results[0].email,
                     name: results[0].name,
+                    phone: results[0].phone,
                 };
  
                 const id = results[0].id;

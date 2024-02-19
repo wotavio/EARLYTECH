@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import { Main, Baner, BannerImg, InfosLabel, LogoPerfil, Fundo, Topicos, Name, Forms, FormCustom, CustomInput, DisplayButton, CancelButton, SaveButton, Divisor, Entrada, FormCustom1, Divisor1 } from "./styled"
-import Banner from "../../assets/Banner.png";
-import Perfil from "../../assets/LogoPerfil.png";
+import Banner from "../../assets/imgPerfilBanner.png";
+import Perfil from "../../assets/Fotinho.png";
 import Footer from "../../components/Footer/Footer"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
@@ -16,11 +16,11 @@ function Config() {
         id: id
     }
     const [user, setUser] = useState()
-    const [nome, setNome] = useState()
-    const [cargo, setCargo] = useState()
+    const [name, setName] = useState()
     const [email, setEmail] = useState()
     const [confirmSenha, setConfirmSenha] = useState()
-    const [senha, setSenha] = useState()
+    const [password, setSenha] = useState()
+    const [phone, setPhone] = useState()
     const toast = useToast()
 
 
@@ -42,19 +42,22 @@ function Config() {
     })
 
     const handleAlter = () => {
-        if (senha !== confirmSenha) {
+        if (password !== confirmSenha) {
             alert("Novas senhas não coincidem")
         } else {
-            const formData = {};
+            const formDatas = {};
         }
-        if (nome) {
-            formDatas.name = nome;
+        if (name) {
+            formDatas.name = name;
         }
         if (email) {
             formDatas.email = email;
         }
-        if (senha) {
-            formDatas.password = senha;
+        if (phone) {
+            formDatas.phone = phone;
+        }
+        if (password) {
+            formDatas.password = password;
         }
 
         console.log(formDatas)
@@ -74,18 +77,18 @@ function Config() {
                 console.log(error)
             });
 
-        setNome('')
-        setCargo('')
+        setName('')
         setEmail('')
+        setPhone('')
         setSenha('')
         setConfirmSenha('')
     }
 
 
     const handleCancel = () => {
-        setNome('')
-        setCargo('')
+        setName('')
         setEmail('')
+        setPhone('')
         setSenha('')
         setConfirmSenha('')
     }
@@ -116,11 +119,11 @@ function Config() {
                                                     <Divisor>
                                                         <Entrada>
                                                             <InfosLabel>Nome</InfosLabel>
-                                                            <CustomInput value={nome} onChange={(e) => setNome(e.target.value)} type="text" placeholder={user.name} />
+                                                            <CustomInput value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder={user.name} />
                                                         </Entrada>
                                                         <Entrada>
-                                                            <InfosLabel>Nome Completo</InfosLabel>
-                                                            <CustomInput type="text" placeholder="Nome Completo" />
+                                                            <InfosLabel>Telefone</InfosLabel>
+                                                            <CustomInput value={phone} type="tel" placeholder={user.phone} onChange={(e) => setPhone(e.target.value)}/>
                                                         </Entrada>
                                                     </Divisor>
                                                     <Divisor>
@@ -142,7 +145,7 @@ function Config() {
                                                     <Divisor1>
                                                         <Entrada>
                                                             <InfosLabel>Senha nova</InfosLabel>
-                                                            <CustomInput value={senha} type="password" onChange={(e) => setSenha(e.target.value)} placeholder="Senha nova" />
+                                                            <CustomInput value={password} type="password" onChange={(e) => setSenha(e.target.value)} placeholder="Senha nova" />
                                                         </Entrada>
                                                     </Divisor1>
                                                     <Divisor1>

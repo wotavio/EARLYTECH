@@ -25,7 +25,7 @@ function Cadastro() {
             const response = await axios.post(`${baseUrl}/user/create`, formData);
  
             if(response.data.success) {
-                alert('Usuario cadastrado')
+                // alert('Usuario cadastrado')
                 navigate('/')
             } else {
                 alert('Não foi possivel cadastrar');

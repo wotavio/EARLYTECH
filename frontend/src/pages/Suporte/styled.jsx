@@ -11,7 +11,7 @@ export const Main = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
 `
 
 export const Baner = styled.div`
@@ -53,14 +53,42 @@ export const H1 = styled.label`
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  color: #fff;
+  color: #23238E;
   text-align: center;
   font-family: Arial Black;
   font-size: 200%;
   font-style: normal;
   font-weight: 400;
-  margin-left: 60%;
+  margin-top: 2vw;
+  margin-left: 30vw;
+  align-items: center;
+`;
+export const H2 = styled.label`
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  text-align: center;
+  font-family: Arial Black;
+  font-size: 200%;
+  font-style: normal;
+  font-weight: 400;
   margin-top: 8vw;
+  margin-left: 60%;
+  align-items: center;
+`;
+export const Textoo = styled.p`
+align-items: center;
+text-align: left;
+flex-direction: column;
+justify-content: flex-start;
+color: black;
+font-family: Arial Black;
+font-size: 16px;
+font-style: normal;
+margin-top: 2vw;
+margin-left: 20vw;
+width: 50vw;
 `;
 export const Esquerda = styled.div`
 width: 80%;
@@ -69,7 +97,7 @@ flex-direction: column;
 align-content: space-between;
 `
 
-export const SaveButton = styled.button`
+export const SaveButton = styled.div`
     height: 7vh;
     width: 6vw;
     align-items: center;
@@ -121,24 +149,18 @@ export const LogoPerfil = styled.img`
 export const Forms = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    height: 65vh;
 `
 
 export const FormCustom = styled.form`
     display: flex;
     flex-direction: row;
-    width: auto;
-    height: 45vh;
     gap: 1vh;
     margin-top: 4vh;
-    gap: 2vw;
 `
 
 export const FormCustom1 = styled.form`
     display: flex;
     flex-direction: column;
-    width: auto;
     height: 45vh;
     gap: 1vh;
     margin-top: 4vh;
@@ -177,24 +199,24 @@ export const Container = styled.figure`
   background-image: url(${ContainerImg});
   background-size: cover;
   background-position: center;
-  margin-left:-3vw;
+  margin-left:-0.8vw;
 `;
 
 export const Divisor = styled.div`
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 70vw;
     gap: 5vh;
 `
 
 export const Divisor1 = styled.div`
     display: flex;
     flex-direction: row;
+    gap: 2vw;
 `
 
 export const Entrada = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    align-items: flex-start;
 `

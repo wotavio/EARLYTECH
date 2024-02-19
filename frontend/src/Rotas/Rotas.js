@@ -6,6 +6,7 @@ import Config from "../pages/Config/Config";
 import Materiais from "../pages/Materiais/Materiais";
 import Suporte from "../pages/Suporte/Suporte";
 import PgMaterial from "../pages/PgMaterial/PgMaterial";
+import CardRecomendado from '../cards/CardRecomendado/CardRecomendado'; 
 
 function Rotas(props){
     return(
@@ -18,7 +19,9 @@ function Rotas(props){
                 <Route path='config' element={<Config/>}/>
                 <Route path='materiais' element={<Materiais/>}/>
                 <Route path='suporte' element={<Suporte/>}/>
-                <Route path='PgMaterial' element={<PgMaterial/>}/>
+                {/* <Route path='PgMaterial' element={<PgMaterial/>}/> */}
+                <Route exact path="/" component={CardRecomendado} />
+                <Route path="/PgMaterial/:id" element={<PgMaterial />} />
             </Routes>
         </BrowserRouter>
     )
