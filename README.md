@@ -1,16 +1,16 @@
 # EALYTECH - Uso da tecnologia no âmbito escolar Infantil ![image](https://github.com/wotavio/EARLYTECH/assets/83969703/4ab6693f-0606-4b6e-ae0e-e0ef6aff37b6)
 <div style="display: flex;flex-direction: row;">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/f6c867ca-8593-49a3-b86a-4f775be4b5ce">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/27a38ac3-8737-43ed-99de-ad9a17be5eb2">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/b9713bc8-d079-44e7-8fe5-706c53d2a95d">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/8e961b8f-3e16-47e1-a0b2-a87e6e6df376">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/231f5124-6cc4-4f72-bedc-1710a0423e96">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/cabbe4e9-8b90-446f-be89-0aaf61e12369">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/eff75b99-b071-433f-a0dd-aef1b372748e">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/0336a35c-3d75-4c23-8a32-f85972bcdc15">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/259237ed-2958-4864-a108-3f2a6af2c905">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/8f328e68-bc9a-4445-9ee3-1c708424c90a">
-  <img align="center" alt="Js" height="50%" width="50%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/db8b81b2-a0ea-47ee-a940-0d5c9ae2f6a4">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/f6c867ca-8593-49a3-b86a-4f775be4b5ce">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/27a38ac3-8737-43ed-99de-ad9a17be5eb2">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/b9713bc8-d079-44e7-8fe5-706c53d2a95d">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/8e961b8f-3e16-47e1-a0b2-a87e6e6df376">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/231f5124-6cc4-4f72-bedc-1710a0423e96">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/cabbe4e9-8b90-446f-be89-0aaf61e12369">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/eff75b99-b071-433f-a0dd-aef1b372748e">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/0336a35c-3d75-4c23-8a32-f85972bcdc15">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/259237ed-2958-4864-a108-3f2a6af2c905">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/8f328e68-bc9a-4445-9ee3-1c708424c90a">
+  <img align="center" alt="Js" height="50%" width="47%" src="https://github.com/wotavio/EARLYTECH/assets/83969703/db8b81b2-a0ea-47ee-a940-0d5c9ae2f6a4">
 </div>
 
 
